@@ -1,9 +1,11 @@
-<form>
+<form method="post" action="<%= url %>">
     <div class="field">
         <label class="label">Nome</label>
         <div class="control">
-            <input class="input" type="text" name="checklist[name]" placeholder="Lista de Tarefas">
-            <p class="is-danger help">Name should be present</p>
+            <input class="input" type="text" name="checklist[name]" placeholder="Lista de Tarefas" value="<%= checklist.name %>">
+                <% if (message) {%>
+                <p class="is-danger help"><%= message %></p>
+                <%}%>
         </div>
     </div>
 

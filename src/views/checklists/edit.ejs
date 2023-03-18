@@ -4,8 +4,8 @@
 
 <section class="section">
     <div class="container">
-        <h1 class="title size-4">Nova Lista de Tarefas</h1>
-        <%- include('form', {url: '/checklists?_method=post' , checklist: checklist}) %>
+        <h1 class="title size-4">Editar '<%= checklist.name %>'</h1>
+        <%- include('form', {url: `/checklists/${checklist._id}/?_method=put` , checklist: checklist}) %>
     </div>
 </section>
 

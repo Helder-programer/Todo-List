@@ -4,8 +4,6 @@ import checklistController from '../controllers/checklistController.js';
 const router = express.Router();
 
 
-
-
 router.get('/', checklistController.showAllChecklists);
 router.post('/', checklistController.addNewChecklist);
 router.get('/new', checklistController.showNewChecklistForm);

@@ -89,6 +89,7 @@ export default {
                             _id: mongoose.Types.ObjectId(id)
 
                         }
+        
                     },
                     {
                         $lookup: { from: 'tasks', localField: '_id', foreignField: 'checklistId', as: 'tasks' }

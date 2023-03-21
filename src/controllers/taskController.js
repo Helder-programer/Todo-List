@@ -38,7 +38,7 @@ export default {
         let { id } = req.params;
 
         try {
-            let task = await Task.findOneAndRemove(id);
+            let task = await Task.findByIdAndRemove(id);
             let checklistId = task.checklistId;
             res.redirect(`/checklists/${checklistId}`);
         } catch (error) {

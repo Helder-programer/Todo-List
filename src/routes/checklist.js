@@ -1,16 +1,16 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import checklistController from '../controllers/checklistController.js';
+import ChecklistController from '../controllers/ChecklistController.js';
 const router = express.Router();
 
 
-router.get('/', checklistController.showAllChecklists);
-router.post('/', checklistController.addNewChecklist);
-router.get('/new', checklistController.showNewChecklistForm);
-router.get('/:id/edit', checklistController.showEditChecklistForm);
-router.put('/:id', checklistController.editChecklist);
-router.delete('/:id', checklistController.deleteChecklist);
-router.get('/:id', checklistController.showOneChecklist);
+router.get('/', ChecklistController.showAllChecklists);
+router.post('/', ChecklistController.addNewChecklist);
+router.get('/new', ChecklistController.showNewChecklistForm);
+router.get('/:id/edit', ChecklistController.showEditChecklistForm);
+router.put('/:id', ChecklistController.editChecklist);
+router.delete('/:id', ChecklistController.deleteChecklist);
+router.get('/:id', ChecklistController.showOneChecklist);
 
 
 export default router;

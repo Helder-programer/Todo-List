@@ -1,0 +1,38 @@
+<%- include('../layouts/header', {title: 'Register' }) %>
+
+    <main class=" vh-100 w-100 main-auth d-flex justify-content-center align-items-center">
+        <div class="auth-container shadow-lg">
+            <div class="left-auth">
+                <form action="/users/login" method="post" style="width: 18rem;">
+                    <h3 class="text-center b-italic mb-4 fst-italic" id="logo">TODO LIST</h3>
+                    <h6 class="text-center mb-4">Create Your Account</h6>
+                    <div class="mb-3">
+                        <label for="">Name:</label>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Email:</label>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Password:</label>
+                        <input class="form-control" type="password">
+                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-sm-4">
+                            <button class="btn text-primary-emphasis w-100" type="submit">Login</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <a class="btn btn-outline-primary w-100" href="users/register">Register</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="right-auth d-flex justify-content-center align-items-center">
+                <img src="/images/Task-amico.svg" alt="" style="width: 30rem;">
+            </div>
+        </div>
+    </main>
+
+
+    <%- include('../layouts/footer')%>

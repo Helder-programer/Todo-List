@@ -1,5 +1,5 @@
-import Checklist from '../models/checklist.js';
-import Task from '../models/task.js';
+import Checklist from '../models/Checklist.js';
+import Task from '../models/Task.js';
 import mongoose from 'mongoose';
 
 

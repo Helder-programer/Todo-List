@@ -1,0 +1,63 @@
+/* LOGIN */
+@import url('colors.css');
+
+@property --rotate
+{
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+
+.main-auth
+{
+    overflow: hidden;
+}
+
+.auth-container
+{
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    border-radius: 10px;
+    background-color: var(--tdl-gray);
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    position: relative;
+}
+
+.auth-container::before
+{
+    content: '';
+    height: 104%;
+    width: 102%;
+    position: absolute;
+    left: -1%;
+    top: -2%;
+    border-radius: 10px;
+    background: linear-gradient(var(--rotate), var(--bs-indigo), var(--bs-blue));
+    z-index: -5;
+    filter: blur(15px);
+    animation: spin 4s ease-in-out infinite;
+}
+
+.left-auth
+{
+    width: 40%;
+    margin-top: 6em;
+    margin-left: 1em;
+}
+
+.right-auth
+{
+    width: 60%;
+}
+
+
+@keyframes spin {
+    from {
+        --rotate: 0deg;
+    }
+    to {
+        --rotate: 360deg
+    }
+}
